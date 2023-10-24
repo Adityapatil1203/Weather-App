@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 900;
    color: white;
     font-family:'Times New Roman', Times, serif;
@@ -60,14 +60,14 @@
     cursor: pointer;
 }
 
-.search-icon:hover{
+/* .search-icon:hover{
 
     cursor: pointer;
    transform: scale(1.1);
    transition-delay: 0.3s;
    translate: 100px 20px;
    transition-duration: 0.5s;
-}
+} */
 
 .weather-image{
     margin-top: 7px;
@@ -79,7 +79,7 @@
 .weather-image:hover{
     transform: scale(1.1);
     transition-delay: 0.3s;
-    translate: 100px 20px;
+    /* translate: 100px 20px; */
     transition-duration: 0.5s;
 }
 
@@ -88,7 +88,7 @@
     justify-content: center;
     color: black;
     font-size:40px;
-    font-weight: 600;
+    font-weight: 700;
 
 }
 
@@ -131,4 +131,50 @@
 .icon{
     margin-top: 10px;
 
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        background-image: none; /* Remove the background image */
+        background-color: #ffffff; /* Set a background color for the container */
+    }
+
+    .container {
+        width: 90%; /* Make the container width responsive */
+        height: auto; /* Let the height adjust to content */
+        margin: 10px; /* Add margin to center the container */
+    }
+
+    .top-bar {
+        flex-direction: column; /* Stack input and search icon vertically */
+        align-items: center; /* Center input and search icon */
+        padding-top: 20px;
+    }
+
+    .top-bar input {
+        width: 100%; /* Make the input width responsive */
+    }
+
+    .search-icon {
+        width: 50px; /* Adjust search icon size */
+        height: 50px;
+    }
+
+    .weather-temp, .weather-location {
+        font-size: 24px; /* Adjust font size for temperature and location */
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        background-image: url("https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=768&h=750&dpr=1");
+    }
+}
+
+/* Media query for screens smaller than 576px (e.g., smaller smartphones) */
+@media (max-width: 576px) {
+    .box {
+        background-image: url("https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=576&h=750&dpr=1");
+    }
 }
